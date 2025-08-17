@@ -5402,4 +5402,41 @@ body:not(:has(:is(.container_6sXIoE, #vc-spotify-player))) .wrapper_ef3116 {
   border-radius: var(--space-16);
 }
 
+/* Ensure proper positioning context for visualizer */
+.appMount__51fd7 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Create stacking context for main app elements */
+.base_c48ade {
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar_c48ade {
+    position: relative;
+    z-index: 2;
+}
+
+.chat_f75fb0,
+.container__01ae2 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure Spotify controls have highest priority */
+.container_791eb8,
+#vc-spotify-player {
+    position: relative;
+    z-index: 100;
+}
+
+/* Allow pseudo-elements on main containers */
+.appMount__51fd7,
+.base_c48ade,
+.chat_f75fb0 {
+    overflow: visible;
+}
+
 /*# sourceMappingURL=main.css.map */
